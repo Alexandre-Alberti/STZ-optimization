@@ -137,9 +137,9 @@ def main():
 
             cons = [c1, c2]
 
-            bx0 = [0.1, 50]
-            bx1 = [0.1, 50]
-            bx2 = [0.1, 50]
+            bx0 = [0.01*eta, 50*eta]
+            bx1 = [0.01*eta, 50*eta]
+            bx2 = [0.01*eta, 50*eta]
 
             ret = minimize(objetivo, x0, method='SLSQP', bounds=[bx0, bx1, bx2], constraints=cons)
             S, T, Z = ret.x[0], ret.x[1], ret.x[2]
@@ -234,8 +234,8 @@ def main():
             resultados_df = pd.DataFrame(resultados)
             media = resultados_df['taxa'].mean()
             desvio_padrao = resultados_df['taxa'].std()
-            st.write(f'Média da Taxa de Custo: {media}')
-            st.write(f'Desvio Padrão da Taxa de Custo: {desvio_padrao}')
+            #st.write(f'Média da Taxa de Custo: {media}')
+            #st.write(f'Desvio Padrão da Taxa de Custo: {desvio_padrao}')
 
     if choice == menu[1]:
         st.header(menu[1])

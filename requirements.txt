@@ -1,0 +1,7 @@
+math
+numpy
+pandas
+scipy
+streamlit
+sys
+PIL

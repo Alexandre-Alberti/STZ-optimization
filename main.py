@@ -6,14 +6,16 @@ from scipy.optimize import minimize
 import streamlit as st
 #import sys
 from streamlit import cli as stcli
-from PIL import Image
+#from PIL import Image
 
 # Funções e definições anteriores
 
 def main():
     col1, col2, col3 = st.columns(3)
-    foto = Image.open('RANDOM.png')
-    col2.image(foto, use_column_width=True)
+
+    st.image("RANDOM.png")
+    #foto = Image.open('RANDOM.png')
+    #col2.image(foto, use_column_width=True)
 
     st.title('Política STZ - uma política flexível de substituição por idade')
 

@@ -124,7 +124,7 @@ def main():
                 TAXA_CUSTO=SOMA_CUST/SOMA_VIDA
                 return TAXA_CUSTO
             
-            #x0 = [0.9, 1.0, 2.0]
+            x0 = [0.9, 1.0, 2.0]
 
             #def cond1(y):
             #    return y[1]-y[0] # T >= S

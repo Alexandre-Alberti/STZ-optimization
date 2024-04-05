@@ -30,7 +30,7 @@ def main():
         beta = st.number_input('Parâmetro de forma (beta)')
         eta = st.number_input('Parâmetro de escala (eta)')    
         lbda = st.number_input('Taxa de chegada de oportunidades (Lambda)')
-        cp = st.number_input('Custo de substituição preventiva em T(programado):') 
+        cp = st.number_input('Custo de substituição preventiva em T(programada):') 
         cv = st.number_input('Custo de substituição preventiva em Z (prorrogada):')
         co = st.number_input('Custo de substituição preventiva antecipada (antes de T) em oportunidade:') 
         cw = st.number_input('Custo de substituição preventiva prorrogada (após T) em oportunidade:')

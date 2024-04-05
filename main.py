@@ -12,10 +12,10 @@ from PIL import Image
 
 def main():
     col1, col2, col3 = st.columns(3)
-    foto = Image.open('foto.png')
+    foto = Image.open('RANDOM.png')
     col2.image(foto, use_column_width=True)
 
-    st.title('Política de Substituição Preventiva com Oportunidade e Prorrogação')
+    st.title('Política STZ - uma política flexível de substituição por idade')
 
     menu = ["Aplicação", "Informação", "Website"]
     choice = st.sidebar.selectbox("Selecione aqui", menu)
@@ -27,13 +27,14 @@ def main():
         #beta = st.number_input('Parâmetro de forma (beta)', value=2.0, step=0.1, format='%.1f')
         beta = st.number_input('Parâmetro de forma (beta)')
         eta = st.number_input('Parâmetro de escala (eta)')    
-        lbda = st.number_input('Taxa de Chegada de Oportunidade (Lambda)')
-        cp = st.number_input('Custo de Substituição Preventiva em T(programado):') 
-        cv = st.number_input('Custo de Substituição Preventiva em Z:')
-        co = st.number_input('Custo de Substituição Preventiva em Oportunidade:') 
-        cf = st.number_input('Custo da manutenção corretiva:') 
-        cw = st.number_input('Substituição oportuna entre T e Z:')
-        p = st.number_input('#Probabilidade de Impedimento:')
+        lbda = st.number_input('Taxa de chegada de oportunidades (Lambda)')
+        cp = st.number_input('Custo de substituição preventiva em T(programado):') 
+        cv = st.number_input('Custo de substituição preventiva em Z (prorrogada):')
+        co = st.number_input('Custo de substituição preventiva antecipada (antes de T) em oportunidade:') 
+        cw = st.number_input('Custo de substituição preventiva prorrogada (após T) em oportunidade:')
+        cf = st.number_input('Custo de substituição corretiva:') 
+        #cw = st.number_input('Substituição oportuna entre T e Z:')
+        p = st.number_input('Probabilidade de impedimento para substituição preventiva:')
         
         st.subheader("Clique no botão abaixo para rodar esse aplicativo:")
         

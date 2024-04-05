@@ -124,24 +124,25 @@ def main():
                 TAXA_CUSTO=SOMA_CUST/SOMA_VIDA
                 return TAXA_CUSTO
             
-            x0 = [0.9, 1.0, 2.0]
+            #x0 = [0.9, 1.0, 2.0]
 
-            def cond1(y):
-                return y[1]-y[0] # T >= S
+            #def cond1(y):
+            #    return y[1]-y[0] # T >= S
 
-            def cond2(y):
-                return y[2]-y[1] # Z >= T
+            #def cond2(y):
+            #    return y[2]-y[1] # Z >= T
 
-            c1 = {'type': 'ineq', 'fun': cond1}
-            c2 = {'type': 'ineq', 'fun': cond2}
+            #c1 = {'type': 'ineq', 'fun': cond1}
+            #c2 = {'type': 'ineq', 'fun': cond2}
 
-            cons = [c1, c2]
+            #cons = [c1, c2]
 
             bx0 = [0.01*eta, 50*eta]
             bx1 = [0.01*eta, 50*eta]
             bx2 = [0.01*eta, 50*eta]
 
-            ret = minimize(objetivo, x0, method='SLSQP', bounds=[bx0, bx1, bx2], constraints=cons)
+            #ret = minimize(objetivo, x0, method='SLSQP', bounds=[bx0, bx1, bx2], constraints=cons)
+            ret = minimize(objetivo, x0, method='SLSQP', bounds=[bx0, bx1, bx2])
             S, T, Z = ret.x[0], ret.x[1], ret.x[2]
 
             st.write('S = :', S)

@@ -133,7 +133,7 @@ def main():
                 # Começo por algoritmo genético
                 
                 populacao = 500
-                evolucoes = 5
+                evolucoes = 50
                 
                 # gerando a populacao inicial 
                 num_linhas = populacao
@@ -206,7 +206,7 @@ def main():
                 C2 = 1.2
                 
                 numero_particulas = 50
-                movimentos = 5
+                movimentos = 50
                 
                 #formação da nuvem
                 # 30 das melhores particulas

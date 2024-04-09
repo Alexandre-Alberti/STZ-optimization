@@ -253,7 +253,7 @@ def main():
                     Z = posicoes[i][2] + velocidades[i][2]
                     
                     if Z <= 0:
-                        Z = rd.uniform(0.5*melhor_global[2], 0.5*melhor_global)
+                        Z = rd.uniform(0.2*melhor_global[2], 1.8*melhor_global[2])
                     
                     if (T>Z) or (T<=0):
                         T = rd.uniform(0,Z)

@@ -38,7 +38,7 @@ def main():
         
         botao = st.button("Obtenha os valores")
         if botao: 
-            with st.spinner('Aguarde, cálculo em andamento. O processo pode demorar vários minutos'):
+            with st.spinner('Aguarde, cálculo em andamento. O processo pode demorar alguns minutos'):
                 resultados = [] 
                 # Definições das funções
                 def fx(x): 

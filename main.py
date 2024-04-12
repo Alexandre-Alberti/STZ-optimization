@@ -132,8 +132,8 @@ def main():
                 # Otimização por meta-heurísticas
                 # Começo por algoritmo genético
                 
-                populacao = 500
-                evolucoes = 50
+                populacao = 200
+                evolucoes = 20
                 
                 # gerando a populacao inicial 
                 num_linhas = populacao
@@ -206,7 +206,7 @@ def main():
                 C2 = 1.2
                 
                 numero_particulas = 50
-                movimentos = 50
+                movimentos = 100
                 
                 #formação da nuvem
                 # 30 das melhores particulas
